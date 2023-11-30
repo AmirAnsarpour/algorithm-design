@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search</title>
+    <script defer>
+        function binarySearch(arr, low, high, target) {
+            if (high >= low) {
+                let mid = low + Math.floor((high - low) / 2);
+                if (arr[mid] === target) {
+                    return mid;
+                } else if (arr[mid] > target) {
+                    return binarySearch(arr, low, mid - 1, target);
+                } else {
+                    return binarySearch(arr, mid + 1, high, target);
+                }
+            } else {
+                return -1;
+            }
+        }
+
+        let orgList = Array.from({ length: 9 }, () => Math.floor(Math.random() * 100));
+        orgList.sort((a, b) => a - b);
+        console.log(`List: ${orgList}`);
+
+        let userTarget = parseInt(prompt("Enter Your Target: "));
+
+        let result = binarySearch(orgList, 0, orgList.length - 1, userTarget);
+
+        if (result === -1) {
+            console.log(`Can't Find ${userTarget} in List`);
+        } else {
+            console.log(`Find ${userTarget}, index: ${result}`);
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Binary Search</h1>
+    <p style="text-align: center;">(open console)</p>
+</body>
+
+</html>
