@@ -5,6 +5,7 @@
 
 import time
 
+
 def binomial_dynamic(n, k):
     dp_table = [[0] * (k + 1) for _ in range(n + 1)]
 
@@ -16,6 +17,7 @@ def binomial_dynamic(n, k):
                 dp_table[i][j] = dp_table[i - 1][j - 1] + dp_table[i - 1][j]
 
     return dp_table[n][k]
+
 
 n = 3000
 k = 2000

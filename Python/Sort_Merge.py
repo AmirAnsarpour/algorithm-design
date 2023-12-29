@@ -6,6 +6,7 @@
 import time
 import random
 
+
 def merge_sort(arr):
     if len(arr) > 1:
         mid = len(arr) // 2
@@ -36,7 +37,8 @@ def merge_sort(arr):
             j += 1
             k += 1
 
-input_list = [random.randint(1, 1000) for _ in range(20)]
+
+input_list = [random.randint(1, 1000) for _ in range(10000)]
 print(f"Original list: {input_list}")
 
 start_time = time.time()

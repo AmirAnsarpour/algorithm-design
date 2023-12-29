@@ -5,6 +5,7 @@
 
 import time
 
+
 def fibonacci_dynamic(n):
     fib_values = [0] * (n + 1)
 
@@ -18,6 +19,7 @@ def fibonacci_dynamic(n):
         fib_values[i] = fib_values[i - 1] + fib_values[i - 2]
 
     return fib_values[n]
+
 
 n = 4000
 start_time = time.time()

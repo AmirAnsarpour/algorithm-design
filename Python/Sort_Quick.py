@@ -6,6 +6,7 @@
 import time
 import random
 
+
 def quick_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -17,7 +18,8 @@ def quick_sort(arr):
 
     return quick_sort(left) + middle + quick_sort(right)
 
-input_list = [random.randint(1, 1000) for _ in range(20)]
+
+input_list = [random.randint(1, 1000) for _ in range(10000)]
 print(f"Original list: {input_list}")
 
 start_time = time.time()

@@ -6,6 +6,7 @@
 import time
 import random
 
+
 def bubble_sort(arr):
     n = len(arr)
 
@@ -19,7 +20,8 @@ def bubble_sort(arr):
         if not swapped:
             break
 
-input_list = [random.randint(1, 1000) for _ in range(20)]
+
+input_list = [random.randint(1, 1000) for _ in range(10000)]
 
 print(f"Original list: {input_list}")
 

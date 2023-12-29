@@ -6,6 +6,7 @@
 import time
 import random
 
+
 def selection_sort(arr):
     n = len(arr)
 
@@ -17,7 +18,8 @@ def selection_sort(arr):
 
         arr[i], arr[min_index] = arr[min_index], arr[i]
 
-input_list = [random.randint(1, 1000) for _ in range(20)]
+
+input_list = [random.randint(1, 1000) for _ in range(10000)]
 
 print(f"Original list: {input_list}")
 
